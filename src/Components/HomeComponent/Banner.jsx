@@ -24,7 +24,7 @@ const Banner = () => {
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="absolute right-10 bottom-[70px] flex items-center justify-end">
+      <div className="absolute right-10 bottom-16 flex items-center justify-end">
         <svg
           style={{ width: "832px", height: "757px" }}
           class="absolute  w-96 h-96 "

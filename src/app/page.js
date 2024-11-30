@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Banner from "../Components/HomeComponent/Banner";
+import PopulerClass from "../Components/HomeComponent/PopulerClass";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function Home() {
@@ -8,7 +9,8 @@ export default function Home() {
     <div>
       <ParallaxProvider>
         <Banner />
-      </ParallaxProvider>
+        <PopulerClass />
+      </ParallaxProvider >
     </div>
   );
 }
