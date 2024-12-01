@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href="#">
                   <Image
                     className="w-auto h-7"
-                    src="/images/full-logo.svg" // Place the logo in the `public/images` folder
+                    src="https://i.ibb.co.com/mRRwvMJ/logo.png" // Place the logo in the `public/images` folder
                     alt="Logo"
                     width={150}
                     height={50}

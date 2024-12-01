@@ -132,6 +132,7 @@ const WeeklyClassSchedule = () => {
 
   return (
     <div
+    id="#schedule"
       className="relative bg-no-repeat bg-cover bg-right py-16 px-4 sm:px-6 lg:px-8 mt-10 "
       style={{
         backgroundImage: `url("https://i.ibb.co.com/8PrJgsm/schedule.png")`,

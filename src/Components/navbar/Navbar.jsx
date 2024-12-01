@@ -15,20 +15,12 @@ export default function Navbar() {
       path: "/",
     },
     {
-      title: "Meals",
-      path: "/meals",
+      title: "Schedule",
+      path: "/schedule",
     },
     {
-      title: "Contact",
-      path: "/contact",
-    },
-    {
-      title: "Blogs",
-      path: "/blogs",
-    },
-    {
-      title: "Catagorie",
-      path: "/catagories",
+      title: "Sign In",
+      path: "/signin",
     },
   ];
   return (
@@ -40,7 +32,7 @@ export default function Navbar() {
               <Image
                 className="w-auto h-6 sm:h-7"
                 src="https://merakiui.com/images/full-logo.svg"
-                alt="Logo"
+                alt="LogoNai"
                 width={100}
                 height={40}
               />
