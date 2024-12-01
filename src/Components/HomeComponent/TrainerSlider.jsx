@@ -22,21 +22,21 @@ const TrainerSlider = () => {
     },
     {
       title: "Yoga Fitness",
-      image: "/images/yoga-fitness.jpg",
+      image: "https://i.ibb.co.com/SNp16v4/coxbazar.jpg",
       time: "10 AM - 11 AM",
       description:
         "Whether you’re a regular yoga guru or just starting out, Fitness First Yoga helps you build strength and flexibility.",
     },
     {
       title: "Zumba Fitness",
-      image: "/images/zumba-fitness.jpg",
+      image: "https://i.ibb.co.com/SNp16v4/coxbazar.jpg",
       time: "4 PM - 6 PM",
       description:
         "This is the activity that everyone's been talking about. Fun, hypnotic, and easy-to-follow dance routines!",
     },
     {
       title: "Pilates Training",
-      image: "/images/pilates.jpg",
+      image: "https://i.ibb.co.com/SNp16v4/coxbazar.jpg",
       time: "9 AM - 10 AM",
       description:
         "Pilates is great for improving posture, flexibility, and overall core strength. It's low-impact and suitable for all ages.",
@@ -51,7 +51,7 @@ const TrainerSlider = () => {
   ];
 
   return (
-    <div className="container flex flex-col lg:flex-row gap-2 items-center justify-center p-6">
+    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6">
       {/* Sidebar Content */}
       <div className="bg-red-500 text-white p-6 w-52 h-52 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">TRAINERS</h2>
@@ -93,32 +93,7 @@ const TrainerSlider = () => {
                   </p>
                 </div>
               </div>
-              {/* <div className="border rounded-lg shadow-lg">
-                <div className="w-full overflow-hidden shadow-lg dark:bg-gray-800 flex items-center justify-center min-h-screen ">
-                 
-                  <Image
-                    src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-                    alt="avatar"
-                    fill
-                    className="object-cover"
-                  />
-
-                  
-                  <div className="py-5 text-center">
-                    <a
-                      href="#"
-                      className="block text-xl font-bold text-gray-800 dark:text-white"
-                      tabIndex="0"
-                      role="link"
-                    >
-                      John Doe
-                    </a>
-                    <span className="text-sm text-gray-700 dark:text-gray-200">
-                      Software Engineer
-                    </span>
-                  </div>
-                </div>
-              </div> */}
+              
             </SwiperSlide>
           ))}
         </Swiper>
