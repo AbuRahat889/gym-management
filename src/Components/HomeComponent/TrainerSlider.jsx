@@ -55,9 +55,7 @@ const TrainerSlider = () => {
       {/* Sidebar Content */}
       <div className="bg-red-500 text-white p-6 w-full lg:w-52 h-52 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">TRAINERS</h2>
-        <p className="text-sm mb-6">
-        pilates, yoga, zumba
-        </p>
+        <p className="text-sm mb-6">pilates, yoga, zumba</p>
       </div>
 
       {/* Swiper Slider */}
@@ -88,12 +86,9 @@ const TrainerSlider = () => {
                 </div>
                 <div className="text-left space-y-5 p-5 border">
                   <h3 className="text-lg font-bold my-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 ">
-                    {item.description}
-                  </p>
+                  <p className="text-sm text-gray-600 ">{item.description}</p>
                 </div>
               </div>
-              
             </SwiperSlide>
           ))}
         </Swiper>
