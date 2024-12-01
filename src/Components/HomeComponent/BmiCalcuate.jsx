@@ -38,7 +38,7 @@ const BmiCalcuate = () => {
   return (
     <div>
       <div
-        className="hero min-h-screen bg-cover bg-right"
+        className="hero min-h-screen bg-cover bg-right text-center md:text-left"
         fill
         style={{
           backgroundImage: `url('https://i.ibb.co.com/g6f9vG5/banner-8.jpg')`,
@@ -46,40 +46,43 @@ const BmiCalcuate = () => {
         }}
       >
         {/* <div className="hero-overlay bg-opacity-60"></div> */}
-        <div className="text-neutral-content text-left">
-          <div className="text-white w-1/2">
-            <h1 className="mb-5 text-5xl font-bold">
+        <div className="text-neutral-content text-center md:text-left p-10 lg:p-0 ">
+          <div className="text-white w-full md:w-1/2">
+            <h1 className="mb-5 text-5xl font-bold text-wrap">
               Let’s Calculate Your BMI
             </h1>
-            <p className="mb-5">
+            <p className="mb-5 text-wrap">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
           </div>
 
-          <form onSubmit={calculateBmi} className="mt-5">
-            <div className="form-control">
+          <form
+            onSubmit={calculateBmi}
+            className="mt-5 flex justify-center flex-col md:flex-row md:justify-start"
+          >
+            <div className="form-control flex flex-col justify-around lg:item-start gap-5">
               <div>
                 <input
                   id="weight"
                   neme="weight"
                   type="number"
                   placeholder="Weight / Kg"
-                  className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none mr-5"
+                  className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
                 />
                 <input
                   type="number"
                   id="height"
                   name="height"
                   placeholder="Height / cm"
-                  className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
+                  className="mt-5 lg:mt-0 w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
                 />
               </div>
               <input
                 type="submit"
                 value="Calculate"
-                className="mt-5 w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 hover:bg-red-500 focus:outline-none transition-all duration-300 ease-in-out delay-200 cursor-pointer"
+                className="m-auto lg:m-0 w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 hover:bg-red-500 focus:outline-none transition-all duration-300 ease-in-out delay-200 cursor-pointer "
               />
             </div>
           </form>
