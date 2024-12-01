@@ -1,6 +1,40 @@
+"use client";
+
 import React from "react";
 
 const BmiCalcuate = () => {
+  const calculateBmi = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value) / 100;
+
+    if (weight <= 0 || height <= 0) {
+      document.getElementById("result").innerHTML =
+        "Please enter valid weight and height values.";
+      return;
+    }
+
+    const bmi = weight / (height * height);
+    let category = "";
+
+    if (bmi < 18.5) {
+      category = "Underweight";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+      category = "Normal weight";
+    } else if (bmi >= 25 && bmi < 29.9) {
+      category = "Overweight";
+    } else {
+      category = "Obesity";
+    }
+
+    document.getElementById("result").innerHTML = `
+          Your BMI is <strong>${bmi.toFixed(
+            2
+          )}</strong>, and weight status is: <strong>${category}</strong>.
+        `;
+  };
   return (
     <div>
       <div
@@ -24,16 +58,20 @@ const BmiCalcuate = () => {
             </p>
           </div>
 
-          <form className="">
+          <form onSubmit={calculateBmi} className="mt-5">
             <div className="form-control">
               <div>
                 <input
-                  type="text"
+                  id="weight"
+                  neme="weight"
+                  type="number"
                   placeholder="Weight / Kg"
                   className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none mr-5"
                 />
                 <input
-                  type="text"
+                  type="number"
+                  id="height"
+                  name="height"
                   placeholder="Height / cm"
                   className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
                 />
@@ -45,7 +83,13 @@ const BmiCalcuate = () => {
               />
             </div>
           </form>
-          
+          <div
+            id="result"
+            style={{
+              marginTop: "20px",
+              fontSize: "20px",
+            }}
+          ></div>
         </div>
       </div>
     </div>
