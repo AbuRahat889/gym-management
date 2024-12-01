@@ -31,10 +31,10 @@ export default function Navbar() {
             <a href="#">
               <Image
                 className="w-auto h-6 sm:h-7"
-                src="https://merakiui.com/images/full-logo.svg"
+                src="https://i.ibb.co.com/mRRwvMJ/logo.png"
                 alt="LogoNai"
-                width={100}
-                height={40}
+                width={150}
+                height={100}
               />
             </a>
 

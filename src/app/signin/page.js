@@ -49,7 +49,7 @@ const SignIn = () => {
               <button className="btn btn-primary">Login</button>
             </div>
             <h1>
-              All Ready Have An Account?{" "}
+              You Have no Account?{" "}
               <Link href="/signup">
                 <span className="font-bold text-red-500">Sign UP </span>
               </Link>{" "}
@@ -58,7 +58,7 @@ const SignIn = () => {
 
           <div className="text-center mb-4 px-8">
             <button className="btn w-full border">
-            <FcGoogle className="text-4xl"/> Continue with Google
+              <FcGoogle className="text-4xl" /> Continue with Google
             </button>
           </div>
         </div>

@@ -51,9 +51,11 @@ const TrainerSlider = () => {
   ];
 
   return (
-    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 mt-24 lg:mt-0">
+    
+    <div className="bg-[#e9e9e9]">
+      <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center px-6 pb-6 lg:mt-0 ">
       {/* Sidebar Content */}
-      <div className="bg-red-500 text-white p-6 w-full lg:w-52 h-52 rounded-lg shadow-lg ">
+      <div className="bg-red-500 text-white p-6 w-full lg:w-52 h-52 shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">TRAINERS</h2>
         <p className="text-sm mb-6">pilates, yoga, zumba</p>
       </div>
@@ -74,8 +76,8 @@ const TrainerSlider = () => {
           {/* Loop through classes array */}
           {classes.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="flex gap-5">
-                <div className="w-96 h-52 border-2">
+              <div className="flex gap-4 bg-[#e9e9e9]">
+                <div className="w-[370px] h-52 border-2">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -84,7 +86,7 @@ const TrainerSlider = () => {
                     className="object-cover w-28"
                   />
                 </div>
-                <div className="text-left space-y-5 p-5 border">
+                <div className="text-left space-y-5 p-5 border bg-red-500">
                   <h3 className="text-lg font-bold my-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 ">{item.description}</p>
                 </div>
@@ -93,6 +95,7 @@ const TrainerSlider = () => {
           ))}
         </Swiper>
       </div>
+    </div>
     </div>
   );
 };

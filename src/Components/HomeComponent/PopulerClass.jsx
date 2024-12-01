@@ -15,35 +15,35 @@ const PopulerClass = () => {
   const classes = [
     {
       title: "Body Combat",
-      image: "/images/body-combat.jpg",
+      image: "https://i.ibb.co.com/VghCSjB/slider2.jpg",
       time: "6 PM - 8 PM",
       description:
-        "BodyCombat is the empowering cardio workout where you are totally unleashed. This fiercely energetic program.",
+        "BodyCombat is the empowering cardio where you are totally unleashed. This fiercely energetic program.",
     },
     {
       title: "Yoga Fitness",
-      image: "/images/yoga-fitness.jpg",
+      image: "https://i.ibb.co.com/k1rhN72/slider1.jpg",
       time: "10 AM - 11 AM",
       description:
         "Whether you’re a regular yoga guru or just starting out, Fitness First Yoga helps you build strength and flexibility.",
     },
     {
       title: "Zumba Fitness",
-      image: "/images/zumba-fitness.jpg",
+      image: "https://i.ibb.co.com/p1PmsH1/slider3.jpg",
       time: "4 PM - 6 PM",
       description:
         "This is the activity that everyone's been talking about. Fun, hypnotic, and easy-to-follow dance routines!",
     },
     {
       title: "Pilates Training",
-      image: "/images/pilates.jpg",
+      image: "https://i.ibb.co.com/k1rhN72/slider1.jpg",
       time: "9 AM - 10 AM",
       description:
         "Pilates is great for improving posture, flexibility, and overall core strength. It's low-impact and suitable for all ages.",
     },
     {
       title: "HIIT Training",
-      image: "/images/hiit.jpg",
+      image: "https://i.ibb.co.com/VghCSjB/slider2.jpg",
       time: "7 PM - 8 PM",
       description:
         "HIIT Training pushes your limits with short bursts of high-intensity workouts followed by recovery periods.",
@@ -51,9 +51,10 @@ const PopulerClass = () => {
   ];
 
   return (
-    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 h-[400px] mt-24 lg:mt-0">
+    <div className="bg-[#e9e9e9]">
+      <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 h-[400px] mt-24 lg:mt-0 ">
       {/* Sidebar Content */}
-      <div className="bg-black text-white p-6 h-[350px] w-full lg:w-52 rounded-lg shadow-lg ">
+      <div className="bg-black text-white p-6 h-[350px] w-full lg:w-52 shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">Popular Classes</h2>
         <p className="text-sm mb-6">
           Why not give one of these popular classes a look?
@@ -79,28 +80,28 @@ const PopulerClass = () => {
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="mySwiper "
+          className="mySwiper"
         >
           {/* Loop through classes array */}
           {classes.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="border rounded-lg shadow-lg overflow-hidden ">
+              <div className="overflow-hidden ">
                 {/* Class Image */}
                 <div className="relative w-full h-52">
                   <Image
-                    src={item.image}
+                  src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover"
                   />
                   {/* Time Overlay */}
-                  <span className="absolute bottom-2 left-20 bg-black/60 text-white text-sm px-3 py-1 rounded">
+                  <span className="absolute -bottom-3 left-20 bg-red-500 text-white text-sm px-3 py-1 rounded">
                     {item.time}
                   </span>
                 </div>
 
                 {/* Class Details */}
-                <div className="p-4 ">
+                <div className="p-5 mt-1">
                   <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
@@ -109,6 +110,7 @@ const PopulerClass = () => {
           ))}
         </Swiper>
       </div>
+    </div>
     </div>
   );
 };
