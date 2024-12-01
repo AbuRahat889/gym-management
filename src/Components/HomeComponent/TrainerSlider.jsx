@@ -11,11 +11,11 @@ import "swiper/css/navigation";
 // Import required modules
 import { Navigation } from "swiper/modules";
 
-const PopulerClass = () => {
+const TrainerSlider = () => {
   const classes = [
     {
       title: "Body Combat",
-      image: "/images/body-combat.jpg",
+      image: "https://i.ibb.co.com/SNp16v4/coxbazar.jpg",
       time: "6 PM - 8 PM",
       description:
         "BodyCombat is the empowering cardio workout where you are totally unleashed. This fiercely energetic program.",
@@ -51,21 +51,13 @@ const PopulerClass = () => {
   ];
 
   return (
-    <div className="container flex flex-col lg:flex-row gap-2 items-center justify-center p-6 h-[400px] ">
+    <div className="container flex flex-col lg:flex-row gap-2 items-center justify-center p-6">
       {/* Sidebar Content */}
-      <div className="bg-black text-white p-6 h-[350px] w-52 rounded-lg shadow-lg ">
-        <h2 className="text-2xl font-bold mb-4">Popular Classes</h2>
+      <div className="bg-red-500 text-white p-6 w-52 h-52 rounded-lg shadow-lg ">
+        <h2 className="text-2xl font-bold mb-4">TRAINERS</h2>
         <p className="text-sm mb-6">
-          Why not give one of these popular classes a look?
+        pilates, yoga, zumba
         </p>
-        <div className="flex gap-2">
-          <button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700">
-            &lt;
-          </button>
-          <button className="p-2 bg-gray-800 rounded-full hover:bg-gray-700">
-            &gt;
-          </button>
-        </div>
       </div>
 
       {/* Swiper Slider */}
@@ -76,35 +68,57 @@ const PopulerClass = () => {
           spaceBetween={20}
           slidesPerView={1}
           breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 1 },
           }}
-          className="mySwiper "
+          className="mySwiper flex"
         >
           {/* Loop through classes array */}
           {classes.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="border rounded-lg shadow-lg overflow-hidden ">
-                {/* Class Image */}
-                <div className="relative w-full h-52">
+              <div className="flex gap-5">
+                <div className="w-96 h-52 border-2">
                   <Image
                     src={item.image}
                     alt={item.title}
+                    width={200}
+                    height={200}
+                    className="object-cover w-28"
+                  />
+                </div>
+                <div className="text-left space-y-5 p-5 border">
+                  <h3 className="text-lg font-bold my-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600 ">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+              {/* <div className="border rounded-lg shadow-lg">
+                <div className="w-full overflow-hidden shadow-lg dark:bg-gray-800 flex items-center justify-center min-h-screen ">
+                 
+                  <Image
+                    src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    alt="avatar"
                     fill
                     className="object-cover"
                   />
-                  {/* Time Overlay */}
-                  <span className="absolute bottom-2 left-20 bg-black/60 text-white text-sm px-3 py-1 rounded">
-                    {item.time}
-                  </span>
-                </div>
 
-                {/* Class Details */}
-                <div className="p-4 ">
-                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  
+                  <div className="py-5 text-center">
+                    <a
+                      href="#"
+                      className="block text-xl font-bold text-gray-800 dark:text-white"
+                      tabIndex="0"
+                      role="link"
+                    >
+                      John Doe
+                    </a>
+                    <span className="text-sm text-gray-700 dark:text-gray-200">
+                      Software Engineer
+                    </span>
+                  </div>
                 </div>
-              </div>
+              </div> */}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -113,4 +127,4 @@ const PopulerClass = () => {
   );
 };
 
-export default PopulerClass;
+export default TrainerSlider;
