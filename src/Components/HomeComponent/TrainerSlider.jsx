@@ -51,9 +51,9 @@ const TrainerSlider = () => {
   ];
 
   return (
-    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6">
+    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 mt-24 lg:mt-0">
       {/* Sidebar Content */}
-      <div className="bg-red-500 text-white p-6 w-52 h-52 rounded-lg shadow-lg ">
+      <div className="bg-red-500 text-white p-6 w-full lg:w-52 h-52 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">TRAINERS</h2>
         <p className="text-sm mb-6">
         pilates, yoga, zumba

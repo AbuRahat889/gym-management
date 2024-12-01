@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -5,29 +6,21 @@ import { ParallaxBanner } from "react-scroll-parallax";
 
 const Banner = () => {
   const background = {
-    image: "https://i.ibb.co.com/5vVB17P/banner-6.jpg",
+    image: "https://i.ibb.co/5vVB17P/banner-6.jpg",
     translateY: [0, 10],
     scale: [1, 1, "easeOutCubic"],
-
-    // translateY: [0, 50],
-    // opacity: [1, 0.3],
-    // scale: [1.05, 1, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
   };
 
   const headline = {
     translateY: [1, 0],
     scale: [1, 1, "easeOutCubic"],
-
-    // translateY: [0, 30],
-    // scale: [1, 1.05, "easeOutCubic"],
     shouldAlwaysCompleteAnimation: true,
     expanded: false,
     children: (
-      <div className="absolute right-10 bottom-16 flex items-center justify-end">
+      <div className="absolute right-10 bottom-16 flex items-center justify-end max-w-4xl px-4 sm:px-8 lg:px-16">
         <svg
-          style={{ width: "832px", height: "757px" }}
-          class="absolute  w-96 h-96 "
+          className="absolute w-64 sm:w-80 lg:w-96 h-auto"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 832 757"
         >
@@ -45,8 +38,8 @@ const Banner = () => {
               y2="757"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF0336" offset="0.1"></stop>
-              <stop offset="1" stop-color="#FF0135" stop-opacity="0.1"></stop>
+              <stop stopColor="#FF0336" offset="0.1"></stop>
+              <stop offset="1" stopColor="#FF0135" stopOpacity="0.1"></stop>
             </linearGradient>
             <linearGradient
               id="paint1_linear"
@@ -56,13 +49,13 @@ const Banner = () => {
               y2="784.746"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF0336" offset="0.1"></stop>
-              <stop offset="1" stop-color="#FF0135" stop-opacity="0.1"></stop>
+              <stop stopColor="#FF0336" offset="0.1"></stop>
+              <stop offset="1" stopColor="#FF0135" stopOpacity="0.1"></stop>
             </linearGradient>
           </defs>
         </svg>
 
-        <div className="text-left space-y-4 text-white z-10 -mt-10">
+        <div className="text-left space-y-4 text-white z-10 -mt-10 max-w-lg">
           <div>
             <div className="inline-block bg-white text-red-500 font-bold text-sm uppercase py-2 px-4 relative">
               <span className="absolute inset-0 -z-10 bg-white rotate-[-2deg] skew-x-[-10deg]"></span>
@@ -70,13 +63,17 @@ const Banner = () => {
             </div>
           </div>
           <div>
-            <h1 className="text-6xl font-bold">MAKE YOUR BODY</h1>
-            <h1 className="text-6xl font-light">FIT & PERFECT</h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
+              MAKE YOUR BODY
+            </h1>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-light">
+              FIT & PERFECT
+            </h1>
           </div>
-          <p>
+          <p className="text-sm sm:text-base lg:text-lg">
             Gymhen an unknown printer took a galley of type and scrambled.
             <br />
-            It has survived unknown printercenturies.
+            It has survived unknown printer centuries.
           </p>
         </div>
       </div>
@@ -98,7 +95,7 @@ const Banner = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto">
       <ParallaxBanner
         layers={[background, headline, foreground, gradientOverlay]}
         className="aspect-[2/1] bg-gray-900"

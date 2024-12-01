@@ -51,9 +51,9 @@ const PopulerClass = () => {
   ];
 
   return (
-    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 h-[400px] ">
+    <div className="container m-auto flex flex-col lg:flex-row gap-2 items-center justify-center p-6 h-[400px] mt-24 lg:mt-0">
       {/* Sidebar Content */}
-      <div className="bg-black text-white p-6 h-[350px] w-52 rounded-lg shadow-lg ">
+      <div className="bg-black text-white p-6 h-[350px] w-full lg:w-52 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-bold mb-4">Popular Classes</h2>
         <p className="text-sm mb-6">
           Why not give one of these popular classes a look?
