@@ -15,8 +15,12 @@ export default function Navbar() {
       path: "/",
     },
     {
-      title: "Schedule",
-      path: "/schedule",
+      title: "TrainerDashboard",
+      path: "/dashboard/trainerDashboard",
+    },
+    {
+      title: "AdminDashboard",
+      path: "/dashboard/adminDashbord",
     },
     {
       title: "Sign In",
