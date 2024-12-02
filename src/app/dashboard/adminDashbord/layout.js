@@ -16,17 +16,25 @@ export default function AdminDashboardLayout({ children }) {
             <li>
               <a
                 href="/dashboard/adminDashbord/manageTrainers"
-                className="block hover:text-gray-400"
+                className="block hover:text-gray-400 text-xl"
               >
                 Manage Trainers
               </a>
             </li>
             <li>
               <a
-                href="/dashboard/reports"
-                className="block hover:text-gray-400"
+                href="/dashboard/adminDashbord/classScheduling"
+                className="block hover:text-gray-400 text-xl"
               >
                 Class Scheduling
+              </a>
+            </li>
+            <li>
+              <a
+                href="/dashboard/adminDashbord/addClass"
+                className="block hover:text-gray-400 text-xl"
+              >
+                Add Class
               </a>
             </li>
           </ul>
@@ -51,7 +59,7 @@ export default function AdminDashboardLayout({ children }) {
         </header>
 
         {/* Page Content */}
-        <main className="flex-1 bg-gray-100 p-6">{children}</main>
+        <main className="flex-1  p-4">{children}</main>
       </div>
     </div>
   );
