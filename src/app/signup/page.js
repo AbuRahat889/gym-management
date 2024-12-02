@@ -3,6 +3,26 @@
 import Link from "next/link";
 import { FcGoogle } from "react-icons/fc";
 const SignUp = () => {
+  const handleSignUp = async (event) => {
+    event.preventDefault();
+    const newUser = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      password: event.target.password.value,
+      role: "Treinee",
+    };
+    console.log(newUser);
+
+    const res = await fetch("http://localhost:3000/signup/api", {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    console.log(res);
+  };
+
   return (
     <div className=" py-20 bg-gray-100 flex items-center justify-center">
       <div className="container m-auto w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
@@ -12,7 +32,7 @@ const SignUp = () => {
         <p className="text-sm text-gray-500 text-center mt-2">
           Create your account to get started
         </p>
-        <form className="mt-6 space-y-6">
+        <form onSubmit={handleSignUp} className="mt-6 space-y-6">
           {/* Name Field */}
           <div>
             <label
@@ -24,6 +44,7 @@ const SignUp = () => {
             <input
               type="text"
               id="name"
+              name="name"
               placeholder="Enter your name"
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
               required
@@ -39,6 +60,7 @@ const SignUp = () => {
             </label>
             <input
               type="email"
+              name="email"
               id="email"
               placeholder="Enter your email"
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
@@ -55,28 +77,14 @@ const SignUp = () => {
             </label>
             <input
               type="password"
+              name="password"
               id="password"
               placeholder="Create a password"
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
               required
             />
           </div>
-          {/* Phone Field */}
-          <div>
-            <label
-              htmlFor="phone"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Phone Number
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              placeholder="+880**********"
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
-              required
-            />
-          </div>
+
           {/* Submit Button */}
           <div>
             <button
