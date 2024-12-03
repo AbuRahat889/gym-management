@@ -8,7 +8,11 @@ const BmiCalcuate = () => {
 
     const form = e.target;
     const weight = parseFloat(document.getElementById("weight").value);
-    const height = parseFloat(document.getElementById("height").value) / 100;
+    const getHeight = parseFloat(document.getElementById("height").value);
+
+    const height = getHeight * 0.3048;
+
+    console.log(height);
 
     if (weight <= 0 || height <= 0) {
       document.getElementById("result").innerHTML =
@@ -72,10 +76,10 @@ const BmiCalcuate = () => {
                   className="w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
                 />
                 <input
-                  type="number"
+                  type="text"
                   id="height"
                   name="height"
-                  placeholder="Height / cm"
+                  placeholder="Height / Feet"
                   className="mt-5 lg:mt-0 w-40 px-4 py-2 text-white bg-[#121212] border border-gray-600 rounded-md focus:outline-none"
                 />
               </div>
